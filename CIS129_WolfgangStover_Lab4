@@ -1,17 +1,32 @@
-
 # Module 4 Lab-4
 # Wolfgang C. Stover
 # 02/29/2024
 # This code calculates the store and employee bonus amounts
 
-# declare local variables
-monthlySales = 110,000  # monthly sales amount
-storeAmount = 6,000  # store bonus amount
-empAmount  = 0  # employee bonus amount
-????? = 0  # percent of sales increase
-prompt = ?????? # prompt will be a string literal
+# declare local variables for store bonus 
 
-    
+monthlySales = 110000  # monthly sales amount
+storeAmount = 6000  # store bonus amount
+monthlySales = 100000
+storeAmount = 5000
+monthlySales = 90000
+storeAmount = 4000
+monthlySales = 80000
+storeAmount = 3000
+ifElse = 0
+
+# declare local variables for employee bonus 
+
+empAmount  = 75  # employee bonus amount
+salesIncrease  = .05  # percent of sales increase
+empAmount  = 50  
+salesIncrease  = .04  
+empAmount  = 40 
+salesIncrease  = .03  
+
+# declare local variables
+
+prompt = print("Enter the monthly sales amount:") # prompt will be a string literal
 
 # This code gets the monthly sales
 
@@ -21,34 +36,35 @@ monthlySales = float(input(prompt))
 
 if monthlySales >= 110000:
 	storeAmount = 6000
-elif _______________________
-	_____________________
-elif ______________________
-	_____________________
-elif _______________________
-	_____________________
+elif monthlySales >= 10000:
+	storeAmount = 5000
+elif monthlySales >= 90000:
+	storeAmount = 4000
+elif monthlySales >= 80000:
+    storeAmount = 3000
 else:
-	______________________
+    storeAmount = 0
 
 
 
 # This code gets the percent of increase in sales
-salesIncrease = float(input(___________))
+salesIncrease = float(input(# The sales increase))
 salesIncrease = salesIncrease / 100
 
 
 # This code determines the employee bonus
 if salesIncrease >= .05:
-	empAmount = ____
-elif salesIncrease >= ____:
-	empAmount = ____
-elif salesIncrease >= _____:
-	empAmount = ____
+	empAmount = 75
+elif salesIncrease >= .04:
+	empAmount = 50
+elif salesIncrease >= .03:
+	empAmount = 30
 else:
-	empAmount = ____
+	empAmount = 0
 
 # This code prints the bonus information
-print("The store bonus amount is $", __________________)
-print("The employee bonus amount is $", _______________)
-if (________ == 6000 ) ___ (empAmount == ____):
+print("The store bonus amount is $",output(storeAmount))
+print("The employee bonus amount is $",output(empAmount))
+if (storeBonus == 6000 ) then (empAmount == 100):
 	print('Congrats! You have reached the highest bonus amounts possible! ')
+
