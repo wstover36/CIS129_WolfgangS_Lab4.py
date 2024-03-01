@@ -1,32 +1,15 @@
 # Module 4 Lab-4
 # Wolfgang C. Stover
 # 02/29/2024
-# This code calculates the store and employee bonus amounts
-
-# declare local variables for store bonus 
-
-monthlySales = 110000  # monthly sales amount
-storeAmount = 6000  # store bonus amount
-monthlySales = 100000
-storeAmount = 5000
-monthlySales = 90000
-storeAmount = 4000
-monthlySales = 80000
-storeAmount = 3000
-ifElse = 0
-
-# declare local variables for employee bonus 
-
-empAmount  = 75  # employee bonus amount
-salesIncrease  = .05  # percent of sales increase
-empAmount  = 50  
-salesIncrease  = .04  
-empAmount  = 40 
-salesIncrease  = .03  
+# This Program calculates the store and employee bonus amounts
 
 # declare local variables
 
-prompt = print("Enter the monthly sales amount:") # prompt will be a string literal
+monthlySales = 110000  # monthly sales amount
+storeAmount = 6000  # store bonus amount
+empAmount = 75  # employee bonus amount
+salesIncrease = 0.5  # percent of sales increase
+prompt = print('Enter the monthly sales amount:')  # prompt will be a string literal
 
 # This code gets the monthly sales
 
@@ -35,6 +18,21 @@ monthlySales = float(input(prompt))
 # This code determines the store bonus
 
 if monthlySales >= 110000:
+    storeAmount = 6000
+elif monthlySales >= 10000:
+    storeAmount = 5000
+elif monthlySales >= 90000:
+    storeAmount = 4000
+elif monthlySales >= 80000:
+    storeAmount = 3000
+else:
+    storeAmount = 0
+
+# This code gets the percent of increase in sales
+
+print('Enter the percent of increase in sales:')
+salesIncrease = float(input('Enter the percent of increase in sales:'))
+
 # This code determines the employee bonus
 if salesIncrease >= .05:
     empAmount = 75
@@ -50,4 +48,3 @@ print("The store bonus amount is $", storeAmount)
 print("The employee bonus amount is $", empAmount)
 if storeAmount == 6000:
     print('Congrats! You have reached the highest bonus amounts possible!')
-
