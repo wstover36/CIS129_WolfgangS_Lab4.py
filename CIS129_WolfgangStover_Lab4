@@ -1,18 +1,18 @@
 # Module 4 Lab-4
 # Wolfgang C. Stover
 # 03/11/2024
-# This program is designed to calculate company-wide bonus for individual employees and stores
+# This program calculates company-wide bonuses for individual employees and stores
 
-# declare local variables
-
-monthlySales = 0  # monthly sales amount
-storeAmount = 0  # store bonus amount
-empAmount = 0  # employee bonus amount
-salesIncrease = 0  # percent of sales increase
+# Declare local variables
+monthlySales = 0    # Monthly sales amount
+storeAmount = 0     # Store bonus amount
+empAmount = 0       # Employee bonus amount
+salesIncrease = 0   # Percent increase in sales
+prompt_sales = "Enter the current monthly sales: "   # Prompt for monthly sales input
+prompt_increase = "How much have sales increased? (in %): "  # Prompt for sales increase input
 
 # This code gets the monthly sales
-print('What are the current monthly sales?')
-monthlySales = float(input())
+monthlySales = float(input(prompt_sales))
 
 # This code determines the store bonus
 if monthlySales >= 110000:
@@ -27,16 +27,8 @@ else:
     storeAmount = 0
 
 # This code gets the percent of increase in sales
-print('How much have sales increased? (in %)')
-salesIncrease = float(input())
-
-# Ensuring salesIncrease is within the specified range
-while salesIncrease not in [3, 4, 5]:
-    print('Error: Sales increase must be 3%, 4%, or 5%. Please enter again.')
-    salesIncrease = float(input())
-
-# Converting percentage to decimal
-salesIncrease = salesIncrease / 100
+salesIncrease = input(prompt_increase)
+salesIncrease = float(salesIncrease) / 100
 
 # This code determines the employee bonus
 if salesIncrease >= 0.05:
@@ -49,7 +41,7 @@ else:
     empAmount = 0
 
 # This code prints the bonus information
-print("The store bonus amount is $", storeAmount)
-print("The employee bonus amount is $", empAmount)
+print("The store bonus amount is: $", storeAmount)
+print("The employee bonus amount is: $", empAmount)
 if storeAmount == 6000 and empAmount == 75:
     print('Congrats! You have reached the highest bonus amounts possible!')
